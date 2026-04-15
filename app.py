@@ -6,7 +6,10 @@ from sklearn.preprocessing import LabelEncoder
 from datetime import datetime
 
 # Load model
-model = joblib.load("D:\Data Science\Project\Car_Price_Prediction.pkl")
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "Car_Price_Prediction.pkl")
+
+model = joblib.load(model_path)
 
 # Paths
 encoders_dir = "encoders"
